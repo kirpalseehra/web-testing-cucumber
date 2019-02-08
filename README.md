@@ -13,8 +13,8 @@ Ruby
 
 ### How to run tests
 1. Open up terminal in cloned repository
-3. Bundle install 
-4. Use ```gem install cucumber``` if not already installed
+3. ```Bundle install``` in terminal 
+4. Use ```gem install cucumber``` if not already installed on device
 2. Run ```cucumber``` in terminal
 
 ### Challenges
