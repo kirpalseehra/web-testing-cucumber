@@ -1,7 +1,7 @@
-# web-testing-cucumber
+# Web-testing-cucumber
 
 ### Description
-I have created a cucumber-based testing framework using Gherking syntax to test the 'https://www.bbc.co.uk' website, specifically the login page. I have taken a POM approach by including separate pages for the homepage and login page as well as, organising my directory structure in an easy to read format. I have created UI tests that check whether the error messages that appear on screen for an end user for different scenarios are correct using capybara.
+I have created a cucumber-based testing framework using Gherking syntax to test the 'https://www.bbc.co.uk' website, specifically the login page. I have taken a POM approach by including separate pages for the homepage and login page which allows the tests I create to be more reusable and maintainable in the future. It also ensures a DRY approach to coding. I have created UI tests that check whether the error messages that appear on screen for an end user for different scenarios are correct using capybara.
 
 ### Languages
 Ruby
@@ -13,8 +13,9 @@ Ruby
 
 ### How to run tests
 1. Open up terminal in cloned repository
-2. Gem install cucumber if not already installed on device
-2. Run 'cucumber' in terminal
+3. Bundle install 
+4. Use ```gem install cucumber``` if not already installed
+2. Run ```'cucumber'``` in terminal
 
 ### Challenges
 1. Creating instance variables and attribute accessors to store the error message string and then using those variables within the tests
