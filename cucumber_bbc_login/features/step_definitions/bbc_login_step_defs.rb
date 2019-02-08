@@ -30,7 +30,7 @@ Then("I receieve an error for not having a long enough password") do
 end
 
 Given("I input correct username details") do
-  @bbc_site.bbc_loginpage.fill_in_username('')
+  @bbc_site.bbc_loginpage.fill_in_username('kirpal-seehra@hotmail.co.uk')
 end
 
 Given("I input the incorrect password details") do
@@ -38,14 +38,14 @@ Given("I input the incorrect password details") do
 end
 
 Then("I receieve an error for not having the right password for that account") do
-  expect(@bbc_site.bbc_loginpage.password_error_message).to eq @bbc_site.bbc_loginpage.incorrect_password
+  expect(@bbc_site.bbc_loginpage.password_error_message).to eq(@bbc_site.bbc_loginpage.incorrect_password) | eq(@bbc_site.bbc_loginpage.reset_password)
   sleep 10
 end
 
 Given("I input a username thats too short") do
-  @bbc_site.bbc_loginpage.fill_in_username('K')
+  @bbc_site.bbc_loginpage.fill_in_username('k')
 end
 
 Then("I receieve an error for having a username too short") do
-  expect(@bbc_site.bbc_loginpage.error_message).to eq @bbc_site.bbc_loginpage.short_username
+  expect(@bbc_site.bbc_loginpage.username_error_message).to eq @bbc_site.bbc_loginpage.short_username
 end

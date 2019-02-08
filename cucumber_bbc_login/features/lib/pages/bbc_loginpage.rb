@@ -2,10 +2,10 @@ require 'capybara/dsl'
 
 class BbcLoginPage
 
-  include Capybara::DSL
+  
 
   attr_accessor :error, :short_password, :incorrect_password , :reset_password , :short_username
-
+  include Capybara::DSL
   EMAIL_USERNAME_ID = 'user-identifier-input'.freeze
   PASSWORD_ID ='password-input'.freeze
   SIGN_IN_BUTTON_ID = 'submit-button'.freeze
