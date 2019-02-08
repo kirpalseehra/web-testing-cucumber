@@ -15,7 +15,7 @@ Ruby
 1. Open up terminal in cloned repository
 3. Bundle install 
 4. Use ```gem install cucumber``` if not already installed
-2. Run ```'cucumber'``` in terminal
+2. Run ```cucumber``` in terminal
 
 ### Challenges
 1. Creating instance variables and attribute accessors to store the error message string and then using those variables within the tests
