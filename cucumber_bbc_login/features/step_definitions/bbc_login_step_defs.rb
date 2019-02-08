@@ -27,7 +27,7 @@ Given("I input short character length password details") do
 end
 
 Then("I receieve an error for not having a long enough password") do
-  expect(@bbc_site.bbc_loginpage.password_error_message).to eq @bbc_site.bbc_loginpage.short_password
+  expect(@bbc_site.bbc_loginpage.password_error_message).to eq @bbc_site.bbc_loginpage.short_password_error
 end
 
 # Inputting correct username credentials but incorrect corresponding password details for that account
@@ -40,7 +40,7 @@ Given("I input the incorrect password details") do
 end
 
 Then("I receieve an error for not having the right password for that account") do
-  expect(@bbc_site.bbc_loginpage.password_error_message).to eq(@bbc_site.bbc_loginpage.incorrect_password) | eq(@bbc_site.bbc_loginpage.reset_password)
+  expect(@bbc_site.bbc_loginpage.password_error_message).to eq(@bbc_site.bbc_loginpage.incorrect_password_error) | eq(@bbc_site.bbc_loginpage.reset_password_error)
   sleep 10
 end
 
@@ -50,7 +50,7 @@ Given("I input a username thats too short") do
 end
 
 Then("I receieve an error for having a username too short") do
-  expect(@bbc_site.bbc_loginpage.username_error_message).to eq @bbc_site.bbc_loginpage.short_username
+  expect(@bbc_site.bbc_loginpage.username_error_message).to eq @bbc_site.bbc_loginpage.short_username_error
 end
 
 # Inputting a password that is too long in character length
@@ -59,7 +59,7 @@ Given("I input a password with too many characters") do
 end
 
 Then("I receieve an error for having a password too long") do
-  expect(@bbc_site.bbc_loginpage.password_error_message).to eq @bbc_site.bbc_loginpage.long_password
+  expect(@bbc_site.bbc_loginpage.password_error_message).to eq @bbc_site.bbc_loginpage.long_password_error
 end
 
 # Inputting a password using only letters
@@ -68,7 +68,7 @@ Given("I input a password using only letters") do
 end
 
 Then("I recieve an error asking me to include something other than just letters") do
-  expect(@bbc_site.bbc_loginpage.password_error_message).to eq @bbc_site.bbc_loginpage.only_letters
+  expect(@bbc_site.bbc_loginpage.password_error_message).to eq @bbc_site.bbc_loginpage.only_letters_error
 end
 
 # Inputting a password using only numbers
@@ -77,5 +77,5 @@ Given("I input a password using only numbers") do
 end
 
 Then("I recieve an error asking me to include something other than just numbers") do
-  expect(@bbc_site.bbc_loginpage.password_error_message).to eq @bbc_site.bbc_loginpage.only_numbers
+  expect(@bbc_site.bbc_loginpage.password_error_message).to eq @bbc_site.bbc_loginpage.only_numbers_error
 end
