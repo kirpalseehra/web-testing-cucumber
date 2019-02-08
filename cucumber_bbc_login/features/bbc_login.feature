@@ -35,3 +35,18 @@ Feature: BBC Login
     When I try to login
     Then I receieve an error for having a password too long
 
+  Scenario: Inputting password credentials with only letters
+    Given I access the bbc login page
+    And I input incorrect username details
+    And I input a password using only letters
+    When I try to login
+    Then I recieve an error asking me to include something other than just letters
+
+  Scenario: Inputting password credentials with only numbers
+    Given I access the bbc login page
+    And I input incorrect username details
+    And I input a password using only numbers
+    When I try to login
+    Then I recieve an error asking me to include something other than just numbers
+
+

@@ -4,7 +4,7 @@ class BbcLoginPage
 
   include Capybara::DSL
 
-  attr_accessor :error, :short_password, :incorrect_password , :reset_password , :short_username , :long_password
+  attr_accessor :error, :short_password, :incorrect_password , :reset_password , :short_username , :long_password, :only_letters, :only_numbers
 
   EMAIL_USERNAME_ID = 'user-identifier-input'.freeze
   PASSWORD_ID ='password-input'.freeze
@@ -19,6 +19,8 @@ class BbcLoginPage
     @reset_password = "Uh oh, that password doesn’t match that account. Please try again."
     @short_username = "Sorry, that username's too short. It needs to be at least two characters."
     @long_password = "Sorry, that password is too long. It can't be more than 50 characters."
+    @only_letters = "Sorry, that password isn't valid. Please include something that isn't a letter."
+    @only_numbers = "Sorry, that password isn't valid. Please include a letter."
   end
 
   def fill_in_username(username)
