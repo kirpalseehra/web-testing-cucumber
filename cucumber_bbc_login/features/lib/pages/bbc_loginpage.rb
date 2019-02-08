@@ -40,5 +40,4 @@ class BbcLoginPage
   def password_error_message
     find(:id ,PASSWORD_ERROR_MESSAGE_ID).text
   end
-
 end

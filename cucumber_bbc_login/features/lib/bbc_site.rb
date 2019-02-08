@@ -9,5 +9,4 @@ class BbcSite
   def bbc_loginpage
     BbcLoginPage.new
   end
-
 end
