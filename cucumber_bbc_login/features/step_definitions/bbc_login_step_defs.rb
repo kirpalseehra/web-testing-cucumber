@@ -72,6 +72,7 @@ Then("I recieve an error asking me to include something other than just letters"
   expect(@bbc_site.bbc_loginpage.password_error_message).to eq @bbc_site.bbc_loginpage.only_letters
 end
 
+# Inputting a password using only numbers
 Given("I input a password using only numbers") do
   @bbc_site.bbc_loginpage.fill_in_password('0873232131231')
 end
