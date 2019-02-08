@@ -26,7 +26,6 @@ Given("I input short character length password details") do
   @bbc_site.bbc_loginpage.fill_in_password('p31423!')
 end
 
-
 Then("I receieve an error for not having a long enough password") do
   expect(@bbc_site.bbc_loginpage.password_error_message).to eq @bbc_site.bbc_loginpage.short_password
 end
