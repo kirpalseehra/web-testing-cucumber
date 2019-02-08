@@ -27,3 +27,11 @@ Feature: BBC Login
     And I input the incorrect password details
     When I try to login
     Then I receieve an error for having a username too short
+
+  Scenario: Inputting password credentials that is to long shows an error
+    Given I access the bbc login page
+    And I input incorrect username details
+    And I input a password with too many characters
+    When I try to login
+    Then I receieve an error for having a password too long
+
